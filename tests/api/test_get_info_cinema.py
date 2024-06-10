@@ -1,7 +1,7 @@
 import allure
 import requests
 from jsonschema import validate
-from schemas.open_cinemas_cart import click_cinema
+from allplay_tests.schemas.open_cinemas_cart import click_cinema
 
 
 @allure.epic('Get info about cinema')

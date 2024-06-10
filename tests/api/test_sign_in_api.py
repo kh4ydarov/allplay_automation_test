@@ -3,7 +3,7 @@ import allure
 import requests
 from dotenv import load_dotenv
 from jsonschema import validate
-from schemas.sign_in import login_user
+from allplay_tests.schemas.sign_in import login_user
 
 
 @allure.epic('Get info about cinema')

@@ -1,7 +1,7 @@
 import allure
 import requests
 from jsonschema import validate
-from schemas.search_cinema import search_movie
+from allplay_tests.schemas.search_cinema import search_movie
 
 
 @allure.epic('Search cinemas')
