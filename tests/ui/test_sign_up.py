@@ -1,5 +1,5 @@
-from allplay_tests.pages.open_page import open_page
-from allplay_tests.pages.authorization import authorization
+from allplay_tests.pages.ui.open_page import open_page
+from allplay_tests.pages.ui.authorization import authorization
 import allure
 
 

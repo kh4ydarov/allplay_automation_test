@@ -1,5 +1,5 @@
-from allplay_tests.pages.change_language import change_language
-from allplay_tests.pages.open_page import open_page
+from allplay_tests.pages.ui.change_language import change_language
+from allplay_tests.pages.ui.open_page import open_page
 import allure
 
 

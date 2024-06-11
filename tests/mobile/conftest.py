@@ -1,10 +1,8 @@
-import os
-from pathlib import Path
 import allure
 import pytest
 from selene import browser
 from appium import webdriver
-from allplay_tests import utils
+from allplay_tests.utils import attach
 from dotenv import load_dotenv
 
 
@@ -18,8 +16,7 @@ def pytest_addoption(parser):
 
 def pytest_configure(config):
     context = config.getoption('--context')
-    env_file = f'.env.{context}'
-    load_dotenv(dotenv_path=env_file)
+    load_dotenv(dotenv_path=f'.env.{context}')
 
 
 @pytest.fixture
@@ -42,9 +39,9 @@ def android_mobile_management(context):
 
     yield
 
-    utils.allure_attach.screenshot()
+    attach.screenshot()
 
-    utils.allure_attach.page_source_xml()
+    attach.page_source_xml()
 
     session_id = browser.driver.session_id
 
@@ -52,5 +49,4 @@ def android_mobile_management(context):
         browser.quit()
 
     if context == 'bstack':
-        utils.allure_attach.bstack_video(session_id)
-
+        attach.bstack_video(session_id)

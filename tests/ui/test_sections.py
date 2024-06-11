@@ -1,4 +1,4 @@
-from allplay_tests.pages.open_page import open_page
+from allplay_tests.pages.ui.open_page import open_page
 import allure
 
 

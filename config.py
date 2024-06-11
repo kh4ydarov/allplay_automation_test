@@ -1,6 +1,6 @@
 import os
 from appium.options.android import UiAutomator2Options
-from selene_in_action import utils
+from allplay_tests.utils import file
 from pydantic import BaseModel
 
 
@@ -14,7 +14,7 @@ class Config(BaseModel):
     platformVersion: str = os.getenv('PLATFORM_VERSION')
     userName: str = os.getenv('USER_NAME')
     accessKey: str = os.getenv('ACCESS_KEY')
-    app_local: str = utils.file.abs_path_from_project(os.getenv('APP'))
+    app_local: str = file.abs_path_from_project(os.getenv('APP'))
     udid: str = os.getenv('UDID')
 
     def to_driver_options(self, context):
