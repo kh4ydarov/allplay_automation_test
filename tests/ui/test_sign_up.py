@@ -1,14 +1,16 @@
+from allure_commons.types import Severity
+
 from allplay_tests.pages.ui.open_page import open_page
 from allplay_tests.pages.ui.authorization import authorization
 import allure
 
 
-@allure.epic('New user registration')
+@allure.title('New user registration with valid data')
+@allure.tag('UI Registration')
+@allure.severity(Severity.CRITICAL)
+@allure.label('owner', 'kh4ydarov')
+@allure.feature('User registration with valid data')
 @allure.story('Registration')
-@allure.feature('Registration')
-@allure.tag('Web UI')
-@allure.label('Owner')
-@allure.severity('High')
 def test_sign_up():
     open_page.open_site()
     open_page.authorization_page()

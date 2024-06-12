@@ -4,7 +4,7 @@ from allplay_tests.pages.mobile.change_page import pages
 
 
 @allure.title('Change page modal')
-@allure.tag('mobile')
+@allure.tag('Mobile')
 @allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'kh4ydarov')
 @allure.feature('Opening changing page modal')

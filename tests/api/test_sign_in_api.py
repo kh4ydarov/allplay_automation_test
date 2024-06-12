@@ -1,17 +1,18 @@
 import os
 import allure
 import requests
+from allure_commons.types import Severity
 from dotenv import load_dotenv
 from jsonschema import validate
 from allplay_tests.schemas.sign_in import login_user
 
 
-@allure.epic('Get info about cinema')
-@allure.story('Get info about cinema')
-@allure.feature('Cinema info')
+@allure.title('Authorization with API')
 @allure.tag('API')
-@allure.label('Owner')
-@allure.severity('High')
+@allure.severity(Severity.CRITICAL)
+@allure.label('owner', 'kh4ydarov')
+@allure.feature('Authorization with API')
+@allure.story('Getting token')
 def test_sign_in(base_api_url):
     load_dotenv()
 
