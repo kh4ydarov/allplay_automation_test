@@ -3,6 +3,7 @@ from allure_commons.types import Severity
 from allplay_tests.pages.mobile.search_movies import search
 
 
+@allure.title('Search icon')
 @allure.epic('Search icon')
 @allure.story('Search movie from icon')
 @allure.feature('Search')

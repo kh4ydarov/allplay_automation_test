@@ -5,6 +5,7 @@ from jsonschema import validate
 from allplay_tests.schemas.search_cinema import search_movie
 
 
+@allure.title('Search cinema by name API')
 @allure.epic('Search cinema with API')
 @allure.story('Get cinema')
 @allure.feature('Searching cinema with API')

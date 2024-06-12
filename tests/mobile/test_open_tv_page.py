@@ -3,6 +3,7 @@ from allure_commons.types import Severity
 from allplay_tests.pages.mobile.change_page import pages
 
 
+@allure.title('Open TV category from modal')
 @allure.epic('Category modal window')
 @allure.story('Change category to TV from modal window')
 @allure.feature('Category modal window')

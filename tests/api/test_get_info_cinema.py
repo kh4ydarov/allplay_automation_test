@@ -5,6 +5,7 @@ from jsonschema import validate
 from allplay_tests.schemas.open_cinemas_cart import click_cinema
 
 
+@allure.title('Get cinema by ID')
 @allure.epic('Get cinema')
 @allure.story('Get cinema')
 @allure.feature('Get cinema cart with API')

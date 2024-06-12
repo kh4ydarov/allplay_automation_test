@@ -3,6 +3,7 @@ from allure_commons.types import Severity
 from allplay_tests.pages.mobile.sign_in_page import authorization
 
 
+@allure.title('Sign in with valid data')
 @allure.epic('Authorization')
 @allure.story('Authorization with valid data')
 @allure.feature('Authorization')
