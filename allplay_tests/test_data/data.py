@@ -18,7 +18,7 @@ class User:
 
 user = User(
     'NARUTO',
-    'jjriley4545@mail.ru',
+    'jjriley45@gmail.com',
     'jjrilenaruto777',
     'jjrilenaruto777',
     'kh4ydarovs@yandex.ru',

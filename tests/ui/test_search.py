@@ -1,16 +1,19 @@
+import pytest
 from allure_commons.types import Severity
-
 from allplay_tests.pages.ui.search_click import search
 from allplay_tests.pages.ui.open_page import open_page
 import allure
 
 
-@allure.title('Search elements')
-@allure.tag('Search')
-@allure.severity(Severity.CRITICAL)
-@allure.label('owner', 'kh4ydarov')
-@allure.feature('Search')
+@allure.epic('Search')
 @allure.story('UI Search button')
+@allure.feature('Search')
+@allure.tag('web')
+@allure.label('owner', 'kh4ydarov')
+@allure.severity(Severity.CRITICAL)
+@pytest.mark.web
+@pytest.mark.critical
+@allure.title('Search elements')
 def test_search():
     open_page.open_site()
     search.search_elements()

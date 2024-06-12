@@ -5,12 +5,12 @@ from jsonschema import validate
 from allplay_tests.schemas.search_cinema import search_movie
 
 
-@allure.title('Search cinema with API')
-@allure.tag('API')
-@allure.severity(Severity.CRITICAL)
-@allure.label('owner', 'kh4ydarov')
+@allure.epic('Search cinema with API')
+@allure.story('Get cinema')
 @allure.feature('Searching cinema with API')
-@allure.story('Search cinema')
+@allure.tag('API')
+@allure.label('owner', 'kh4ydarov')
+@allure.severity(Severity.CRITICAL)
 def test_search(base_api_url):
     with allure.step('Send request with valid data'):
         response = requests.get(f'{base_api_url}/api/v1/movies',

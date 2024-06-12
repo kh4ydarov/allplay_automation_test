@@ -1,16 +1,19 @@
+import pytest
 from allure_commons.types import Severity
-
 from allplay_tests.pages.ui.open_page import open_page
 from allplay_tests.pages.ui.authorization import authorization
 import allure
 
 
-@allure.title('Authorization with valid data')
-@allure.tag('UI')
-@allure.severity(Severity.CRITICAL)
-@allure.label('owner', 'kh4ydarov')
+@allure.epic('Authorization')
+@allure.story('User authorization')
 @allure.feature('User authorization with valid data')
-@allure.story('Authorization')
+@allure.tag('Web')
+@allure.label('owner', 'kh4ydarov')
+@allure.severity(Severity.CRITICAL)
+@pytest.mark.web
+@pytest.mark.critical
+@allure.title('Search elements')
 def test_sign_in():
     open_page.open_site()
     open_page.authorization_page()

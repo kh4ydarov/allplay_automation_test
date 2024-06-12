@@ -3,12 +3,12 @@ from allure_commons.types import Severity
 from allplay_tests.pages.mobile.change_page import pages
 
 
-@allure.title('Change page to TV')
+@allure.epic('Category modal window')
+@allure.story('Change category to TV from modal window')
+@allure.feature('Category modal window')
 @allure.tag('mobile')
-@allure.severity(Severity.CRITICAL)
-@allure.label('owner', 'kh4ydarov')
-@allure.feature('Change page modal')
-@allure.story('TV page')
+@allure.label('owner')
+@allure.severity(Severity.NORMAL)
 def test_change_to_tv():
     pages.mobile_pages_modal_open()
     pages.asserting_modal_categories()
