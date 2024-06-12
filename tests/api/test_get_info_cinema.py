@@ -17,7 +17,7 @@ def test_get_cinema_info(base_api_url):
     with allure.step('Send request with valid data'):
         response = requests.get(f'{base_api_url}/api/v1/movie/{cinema_id}')
 
-    # with allure.step('Status code=200'):
-    #     assert response.status_code == 200
+    with allure.step('Status code=200'):
+        assert response.status_code == 200
     with allure.step('Schema is validate'):
         validate(response.json(), click_cinema)
