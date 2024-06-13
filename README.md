@@ -1,30 +1,40 @@
-<h1 align="center">Фреймворк для автоматизации тестирование онлайн кинотеатра Allplay"</h1>
+<h1 align="center">Framework for automating test
+Case: Allplay"</h1>
 
 <img align="center" src="resources/images/site.png"/>  
 
 ***
-***Особенности проекта***  
--Оповещения о тестовых прогонах в Telegram  
--Отчеты с видео, скриншотом, логами, исходной моделью разметки страницы  
--Сборка проекта в Jenkins  
--Отчеты Allure Report  
--Интеграция с Allure TestOps
--Запуск web/UI автотестов в Selenoid.
+***Project Features***  
+-Notifications about test runs in Telegram  
+-Reports with video, screenshot, logs, original page layout model  
+-Building the project in Jenkins  
+-Allure Reports  
+-Integration with Allure TestOps
+-Running web/UI autotests in Selenoid.
 
 
 ***
-***Список проверок, реализованных в web/UI автотестах***
+***List of checks implemented in web/UI autotests***
 
--Проверка регистрации на сайте   
--Вход в сайт с зарегестрированными данными     
--Переход в раздел ТВ по кнопке который находиться в шапке сайта  
--Переход в раздел Кинотеатр по кнопке   
--Поиск определленого фильма по называнию и   переход на карточку фильма    
+-Checking registration on the site   
+-Login to the site with registered data     
+-Go to the TV section using the button located in the site header  
+-Go to the Cinema section using the button   
+-Search for a specific movie by title and go to the movie card
+
+***
+
+***List of checks implemented in mobile app autotests***
+ 
+-User authorization with valid data  
+-Go to the TV section using the button located in the modal   
+-Search for a specific movie by title and go to the movie card
+-Checking the modal window to change category
 
 ***
 
 
-***Используемый стэк***  
+***Stack used***
 <p align="left">
 <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" height="40" width="40" />
 <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" height="40" width="40" />
@@ -40,10 +50,10 @@
 <img align="center" src="resources/images/browserstack.png" height="40" width="40" />
 
 ***  
-***Запуск тестов***  
+***Run tests***
 ---
 
-<h2 id="run-tests"><img width="40" align="center" src="resources/run-tests.png" alt="run"> Run tests</h2>
+
 <p><b>For web tests:</b></p>
 <pre>
     pytest tests/ui
@@ -63,7 +73,7 @@
 
 ---
 
-<p>To run tests in Jenkins you need to click on <b>Build with Parameters</b> button</p>
+<p> To run tests in Jenkins you need to click on <b>Build with Parameters</b> button</p>
 <img src="resources/images/build.png" alt="build">
 <p>Сhoose parameters (<i>BROWSER_VERSION, ENVIRONMENT, COMMENT</i>) and click on <b>"Build"</b> button</p>
 <img src="resources/images/parametrs.png" alt="parameters">
@@ -84,7 +94,7 @@
 ---
 
 
-***Видео прохождение UI автотестов*** 
+***Video of UI autotests***
 
 <img align="center" src="resources/images/video_from-test.gif"/>  
 
