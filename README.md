@@ -32,6 +32,14 @@
 
 ***
 
+***List of checks API***
+ 
+-User authorization with valid data from API  
+-Getting info about cinema   
+-Search for a specific movie by ID
+
+***
+
 
 ***Stack used***
 <p align="left">
