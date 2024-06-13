@@ -85,14 +85,6 @@
 <p>Project in Jira</p>
 <img src="resources/images/jira_integration.png" alt="jira">
 
-
----
-
-
-
----
-
-
 ***Video of UI autotests***
 
 <img align="center" src="resources/images/video_from-test.gif"/>  
