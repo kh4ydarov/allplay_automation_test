@@ -1,5 +1,4 @@
-<h1 align="center">Framework for automating test
-Case: Allplay"</h1>
+<h1 align="center">Framework for automating test Allplay</h1>
 
 <img align="center" src="resources/images/site.png"/>  
 
