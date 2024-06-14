@@ -25,5 +25,9 @@ def test_sign_in(base_api_url):
 
     with allure.step('Status code=200'):
         assert response.status_code == 200
+        response_json = response.json()
+    with allure.step('Checking whether the response contains api_token'):
+        assert 'api_token' in response_json, "'api_token' not found in the response body"
+        assert response_json['api_token'] is not None, "'api_token' is None"
     with allure.step('Schema is validate'):
         validate(response.json(), login_user)

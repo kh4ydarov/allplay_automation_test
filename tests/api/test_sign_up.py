@@ -16,7 +16,7 @@ from allplay_tests.schemas.sign_up import sign_up_api
 def test_sign_in(base_api_url):
     load_dotenv()
 
-    name = 'NarutoKun'
+    name = 'Humoyun'
     login = os.getenv('new_user_email')
     password = os.getenv('new_user_password')
 
@@ -27,5 +27,8 @@ def test_sign_in(base_api_url):
 
     with allure.step('Status code=200'):
         assert response.status_code == 200
+        response_json = response.json()
+    with allure.step('Checking whether the movie name matches the request'):
+        assert response_json['result'] == 'ok'
     with allure.step('Schema is validate'):
         validate(response.json(), sign_up_api)

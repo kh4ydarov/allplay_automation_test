@@ -18,5 +18,8 @@ def test_sign_in(base_api_url):
 
     with allure.step('Status code=422'):
         assert response.status_code == 422
+        response_json = response.json()
+    with allure.step('Checking whether the movie name matches the request'):
+        assert response_json['errors']['email'] == ['Имя пользователя и пароль не совпадают.']
     with allure.step('Schema is validate'):
         validate(response.json(), invalid_sign_in)

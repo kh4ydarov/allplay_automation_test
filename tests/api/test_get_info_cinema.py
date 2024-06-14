@@ -1,8 +1,10 @@
 import allure
+import json
 import requests
 from allure_commons.types import Severity
 from jsonschema import validate
 from allplay_tests.schemas.open_cinemas_cart import click_cinema
+from allplay_tests.utils.api_helper import api_request
 
 
 @allure.title('Get cinema by ID')
@@ -14,10 +16,17 @@ from allplay_tests.schemas.open_cinemas_cart import click_cinema
 @allure.severity(Severity.CRITICAL)
 def test_get_cinema_info(base_api_url):
     cinema_id = 3673
+
     with allure.step('Send request with valid data'):
         response = requests.get(f'{base_api_url}/api/v1/movie/{cinema_id}')
+    with allure.step('Attach response for debugging'):
+        allure.attach(response.text, name="Response Body", attachment_type=allure.attachment_type.JSON)
 
     with allure.step('Status code=200'):
         assert response.status_code == 200
+
+        response_json = response.json()
+    with allure.step('Checking whether the movie id matches the request'):
+        assert response_json['data']['id'] == cinema_id
     with allure.step('Schema is validate'):
         validate(response.json(), click_cinema)
