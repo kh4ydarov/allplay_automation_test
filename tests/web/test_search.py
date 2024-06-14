@@ -1,6 +1,6 @@
 import pytest
 from allure_commons.types import Severity
-from allplay_tests.pages.ui.search_click import search
+from allplay_tests.pages.ui.search_click_page import search
 from allplay_tests.pages.ui.open_page import open_page
 import allure
 

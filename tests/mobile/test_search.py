@@ -1,6 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from allplay_tests.pages.mobile.search_movies import search
+from allplay_tests.pages.mobile.search_movies_page import search
 
 
 @allure.title('Search icon')
