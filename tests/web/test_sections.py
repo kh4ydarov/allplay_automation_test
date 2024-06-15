@@ -5,15 +5,30 @@ import allure
 
 
 @allure.epic('Section click')
-@allure.story('UI Sections')
+@allure.story('UI Movie section')
 @allure.feature('Sections')
 @allure.tag('Web')
 @allure.label('owner', 'kh4ydarov')
 @allure.severity(Severity.CRITICAL)
 @pytest.mark.web
 @pytest.mark.critical
-@allure.title('Search elements')
-def test_sections_click():
+@allure.title('Section Movies clickable')
+def test_sections_click_tv():
     open_page.open_site()
     open_page.tv_page()
     open_page.asserting_tv_page()
+
+
+@allure.epic('Section click')
+@allure.story('UI Radio section')
+@allure.feature('Sections')
+@allure.tag('Web')
+@allure.label('owner', 'kh4ydarov')
+@allure.severity(Severity.CRITICAL)
+@pytest.mark.web
+@pytest.mark.critical
+@allure.title('Section Radio clickable')
+def test_sections_click_radio():
+    open_page.open_site()
+    open_page.radio_page()
+    open_page.asserting_radios_page()

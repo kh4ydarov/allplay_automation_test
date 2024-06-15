@@ -29,6 +29,16 @@ class OpenPage:
             browser.element('.PageSection__title-left').should(have.text('Список каналов'))
         return self
 
+    def radios_page(self):
+        with allure.step("Переход в раздел Radio"):
+            browser.element('a.Navbar__link[href="/radio"]').click()
+        return self
+
+    def asserting_radios_page(self):
+        with allure.step("Проверка страницы после нажатие кнопки в раздел Radio"):
+            browser.element('.PageSection__title-left').should(have.text('Онлайн-радио'))
+        return self
+
     def authorization_page(self):
         with allure.step("Переход в страницу авторизации"):
             browser.element('a.d-none.d-lg-inline.Navbar__link[href="/login/"]').click()
