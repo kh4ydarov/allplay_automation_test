@@ -1,6 +1,6 @@
 import allure
 
-from selene import browser, be, have
+from selene import browser, be, have, by
 
 
 class OpenPage:
@@ -31,7 +31,7 @@ class OpenPage:
 
     def radios_page(self):
         with allure.step("Переход в раздел Radio"):
-            browser.element('a.Navbar__link[href="/radio"]').click()
+            browser.element(by.css('div.Navbar__center')).element(by.xpath('.//a[@href="/radio"]')).click()
         return self
 
     def asserting_radios_page(self):
