@@ -1,8 +1,8 @@
 import allure
-import requests
 from allure_commons.types import Severity
 from jsonschema import validate
 from allplay_tests.schemas.search_cinema import search_movie
+from allplay_tests.utils.api_helper import api_request
 
 
 @allure.title('Search cinema by name API')
@@ -14,8 +14,8 @@ from allplay_tests.schemas.search_cinema import search_movie
 @allure.severity(Severity.CRITICAL)
 def test_search(base_api_url):
     with allure.step('Send request with valid data'):
-        response = requests.get(f'{base_api_url}/api/v1/movies',
-                                data={"search": "Не с первой попытки", "per_page": "1"})
+        response = api_request(base_api_url, '/api/v1/movies', 'GET',
+                               {"search": "Не с первой попытки", "per_page": "1"})
 
     with allure.step('Status code=200'):
         assert response.status_code == 200

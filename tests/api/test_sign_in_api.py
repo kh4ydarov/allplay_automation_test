@@ -1,10 +1,10 @@
 import os
 import allure
-import requests
 from allure_commons.types import Severity
 from dotenv import load_dotenv
 from jsonschema import validate
 from allplay_tests.schemas.sign_in import login_user
+from allplay_tests.utils.api_helper import api_request
 
 
 @allure.title('Authorization with API')
@@ -20,8 +20,8 @@ def test_sign_in(base_api_url):
     password = os.getenv('user_api_password')
 
     with allure.step('Send request with valid data'):
-        response = requests.post(f'{base_api_url}/api/v1/login', data={'email': login,
-                                                                       'password': password})
+        response = api_request(base_api_url, '/api/v1/login', 'POST',
+                               {"email": login, "password": password})
 
     with allure.step('Status code=200'):
         assert response.status_code == 200

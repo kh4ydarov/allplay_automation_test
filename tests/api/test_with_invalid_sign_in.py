@@ -1,8 +1,8 @@
 import allure
-import requests
 from allure_commons.types import Severity
 from jsonschema import validate
 from allplay_tests.schemas.invalid_sign_in import invalid_sign_in
+from allplay_tests.utils.api_helper import api_request
 
 
 @allure.title('Authorization with invalid data')
@@ -13,8 +13,8 @@ from allplay_tests.schemas.invalid_sign_in import invalid_sign_in
 @allure.story('Authorization')
 def test_sign_in(base_api_url):
     with allure.step('Send request with invalid data'):
-        response = requests.post(f'{base_api_url}/api/v1/login', data={'email': 'login',
-                                                                       'password': 'password'})
+        response = api_request(base_api_url, '/api/v1/login', 'POST',
+                               {"email": 'login', "password": 'password'})
 
     with allure.step('Status code=422'):
         assert response.status_code == 422
