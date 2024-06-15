@@ -30,5 +30,5 @@ def test_sections_click_tv():
 @allure.title('Section Radio clickable')
 def test_sections_click_radio():
     open_page.open_site()
-    open_page.radio_page()
+    open_page.radios_page()
     open_page.asserting_radios_page()
