@@ -13,7 +13,7 @@ import allure
 @allure.severity(Severity.CRITICAL)
 @pytest.mark.web
 @pytest.mark.critical
-@allure.title('Search elements')
+@allure.title('Sign in with valid data')
 def test_sign_in():
     open_page.open_site()
     open_page.authorization_page()
