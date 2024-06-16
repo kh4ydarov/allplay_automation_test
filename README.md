@@ -98,3 +98,9 @@
 <img align="center" src="resources/images/video_from-test.gif"/>  
 
 ***
+
+***Video of Mobile autotests***
+
+<img align="center" src="resources/images/mobile_test.gif"/>  
+
+***
